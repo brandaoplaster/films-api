@@ -24,7 +24,7 @@ services:
       - 'redis'
       - 'webservice'
     build: .
-    command: bash start_jobs
+    # command: bash start_jobs
     volumes:
       - '.:/films-api'
     volumes_from:
