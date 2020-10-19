@@ -26,4 +26,29 @@ RSpec.describe Api::V1::MoviesController, type: :controller do
       end
     end
   end
+
+  describe "POST #create" do
+    context "Valid parameters" do
+      before(:each) do
+        @list_movie = [{:title => "oi"},{:title => "oi"}]
+        post :create, params: { movie: @list_movie }
+      end
+
+      it "returns http success" do
+        expect(response).to have_http_status(:success)
+      end
+
+    end
+
+    context "Invalid parameters" do
+      before(:each) do
+        @list_movie = []
+        post :create, params: { movie: @list_movie }
+      end
+
+      it "returns http unprocessable entity" do
+        expect(response).to have_http_status(:unprocessable_entity)
+      end
+    end
+  end
 end
