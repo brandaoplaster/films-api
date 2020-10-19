@@ -11,7 +11,7 @@ services:
       POSTGRES_HOST_AUTH_METHOD: trust
 
   redis:
-    image: 'redis:3.2-alpine'
+    image: 'redis:latest'
     command: redis-server
     ports:
       - '6379:6379'
@@ -24,7 +24,7 @@ services:
       - 'redis'
       - 'webservice'
     build: .
-    # command: bash start_jobs
+    command: bash start_jobs
     volumes:
       - '.:/films-api'
     volumes_from:

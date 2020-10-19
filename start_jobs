@@ -1,1 +1,1 @@
-bundle exec sidekiq -q films
+bundle exec sidekiq -q film -c 3

@@ -1,7 +1,7 @@
 FROM ruby:2.6.6
 
 RUN apt-get update && apt-get install -qq -y --no-install-recommends \
-      build-essential nodejs libpq-dev
+      build-essential nodejs libpq-dev nano
 
 ENV INSTALL_PATH /films-api
 
