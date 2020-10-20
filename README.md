@@ -25,7 +25,7 @@ docker-compose run --rm webservice bundle exec rails db:create
 docker-compose run --rm webservice bundle exec rails db:migrate
 ```
 
-> confiruando master key.
+> configuando master key.
 
 - Acesse o container webservice
 ```
