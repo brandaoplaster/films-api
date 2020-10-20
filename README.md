@@ -120,6 +120,8 @@ A lista de títulos de filmes vai ser enfileirada no redis, assim que esta lista
 
 Assim que essa busca por feita o resultado é retornado para o MovieJob, pois é nele que é chamado o model Movie que vai persistir esta busca no banco de dados.
 
+A partir deste momento é possível acessar o endpoint index para lista os filmes já processados e cadastrados no banco de dados.
+
 Todo esse processo pode ser visto na imagem abaixo seguindo o fluxo como foi descrito acima.
 
 
