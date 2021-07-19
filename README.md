@@ -27,6 +27,12 @@ docker-compose run --rm webservice bundle exec rails db:migrate
 
 > configuando master key.
 
+> Caso necessario remova os seguintes arquivos.
+```
+config/master.key
+config/credentials.yml.enc
+```
+
 - Acesse o container webservice
 ```
 docker-compose run --rm webservice bash
